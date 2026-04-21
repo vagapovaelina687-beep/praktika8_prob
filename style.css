@@ -1,0 +1,621 @@
+/* ===== ПОДКЛЮЧЕНИЕ ШРИФТОВ ===== */
+@font-face {
+    font-family: 'GraphikLCG';
+    src: url('../fonts/GraphikLCG-Regular.woff2') format('woff2'),
+         url('../fonts/GraphikLCG-Regular.woff') format('woff'),
+         url('../fonts/GraphikLCG-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GraphikLCG';
+    src: url('../fonts/GraficalLCG-Bold.woff2') format('woff2'),
+         url('../fonts/GraficalLCG-Bold.woff') format('woff'),
+         url('../fonts/GraficalLCG-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* ===== ОБЩИЕ ПРАВИЛА ===== */
+/* Убираем все внешние и внутренние отступы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Задаем цвет и шрифт для основного текста */
+body {
+    font-family: 'GraphikLCG', sans-serif;
+    color: #333;
+}
+
+/* Для заголовков задаем шрифт */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'GraphikLCG', sans-serif;
+    font-weight: bold;
+}
+
+/* Убираем у гиперссылок синий цвет и подчеркивание */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* При наведении курсора на гиперссылку делаем подчеркнутым */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Основной цвет фона для section main */
+.main-header, .banner, .about, .advantages, .favorites, .lead, .gamecard, .events, .main-footer {
+    width: 100%;
+}
+
+/* ===== СТИЛИ ДЛЯ КНОПОК (единый стиль) ===== */
+.btn {
+    background-color: #ff6b35;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e55a2b;
+}
+
+/* ===== БЛОК 1. HEADER ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 5%;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+/* Навигация */
+.navigation {
+    width: 50%;
+    text-align: center;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.navigation li {
+    margin: 0 2%;
+}
+
+.navigation a {
+    font-size: 16px;
+}
+
+/* Иконки */
+.icons {
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ===== БЛОК 2. БАННЕР ===== */
+.banner {
+    background-image: url('../img/bg.svg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.star-img {
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.flower-img {
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.banner-info {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.banner-title {
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.banner-title .blue {
+    color: #2b6ef0;
+}
+
+.banner-info p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* ===== БЛОК 3. О НАС ===== */
+.about {
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 30%;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card1 {
+    background-color: #f0f8ff;
+}
+
+.card2 {
+    background-color: #fff0f5;
+}
+
+.card3 {
+    background-color: #f5fff0;
+}
+
+.card-img {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===== БЛОК 4. ADVANTAGES ===== */
+.advantages {
+    background-color: #2b6ef0;
+    border-radius: 50px;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.advantages h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.advantages-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.adv-item h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.adv-item img {
+    width: 60px;
+    height: 60px;
+}
+
+/* ===== БЛОК 5. FAVORITES ===== */
+.favorites {
+    padding: 60px 0;
+}
+
+.favorites-text {
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.favorites-text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.favorites-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.fav-card-big {
+    width: 50%;
+    background-color: #ff6b35;
+    border-radius: 20px;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.fav-card-small-group {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fav-card-small {
+    width: 48%;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.fav-card h3 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.fav-card-small h3 {
+    color: #333;
+}
+
+/* ===== БЛОК 6. LEAD ===== */
+.lead {
+    background-image: url('../img/lead-bg.jpg');
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.lead-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.lead-text {
+    width: 50%;
+}
+
+.lead-text h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.lead-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.lead-heart {
+    margin-top: -50px;
+}
+
+.lead-heart img {
+    transform: rotate(-32deg);
+    width: 120px;
+}
+
+/* ===== БЛОК 7. GAMECARD ===== */
+.gamecard {
+    padding: 60px 0;
+}
+
+.gamecard-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.gamecard-img {
+    width: 30%;
+}
+
+.gamecard-img img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.gamecard-info {
+    width: 40%;
+}
+
+.gamecard-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rating-stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 40%;
+}
+
+.rating-city {
+    width: 40%;
+}
+
+.rating-city h3 {
+    font-size: 14px;
+    color: #666;
+}
+
+.rating-city p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gamecard-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.gamecard-features {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feature img {
+    width: 20px;
+}
+
+.gamecard-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6b35;
+}
+
+.gamecard-tabs {
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.tab-btn input {
+    display: none;
+}
+
+.tab-btn:has(input:checked) {
+    background-color: #ff6b35;
+    color: #fff;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ===== БЛОК 8. EVENTS / ФОРМА ===== */
+.events {
+    background-image: url('../img/events-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    padding-top: 80px;
+}
+
+.events-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.events-text {
+    width: 45%;
+    text-align: left;
+}
+
+.events-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.events-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.events-stickers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sticker {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sticker.arrow {
+    transform: rotate(14deg);
+}
+
+.events-form {
+    width: 40%;
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.events-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.events-form label {
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.events-form input[type="text"],
+.events-form input[type="email"],
+.events-form input[type="tel"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* ===== БЛОК 9. ПОДВАЛ / FOOTER ===== */
+.main-footer {
+    background-color: #1a1a2e;
+    padding: 40px 0;
+}
+
+.footer-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    color: #888;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
